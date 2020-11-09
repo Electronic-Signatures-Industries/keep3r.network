@@ -491,7 +491,7 @@ contract Governance {
 
     function getChainId() internal pure returns (uint) {
         uint chainId;
-        assembly { chainId := chainid() }
+        //assembly { chainId := chainid() }
         return chainId;
     }
 
