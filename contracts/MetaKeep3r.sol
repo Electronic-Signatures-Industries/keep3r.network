@@ -1,29 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.12;
 
-library SafeMath {
-    function add(uint a, uint b) internal pure returns (uint) {
-        uint c = a + b;
-        require(c >= a, "add: +");
-
-        return c;
-    }
-    function add(uint a, uint b, string memory errorMessage) internal pure returns (uint) {
-        uint c = a + b;
-        require(c >= a, errorMessage);
-
-        return c;
-    }
-    function sub(uint a, uint b) internal pure returns (uint) {
-        return sub(a, b, "sub: -");
-    }
-    function sub(uint a, uint b, string memory errorMessage) internal pure returns (uint) {
-        require(b <= a, errorMessage);
-        uint c = a - b;
-
-        return c;
-    }
-}
 
 interface IKeep3rV1 {
     function isMinKeeper(address keeper, uint minBond, uint earned, uint age) external returns (bool);
